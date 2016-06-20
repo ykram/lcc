@@ -3,7 +3,7 @@ A=.a
 O=.o
 E=
 CC=cc
-CFLAGS=-g
+CFLAGS=-g -m32
 LDFLAGS=-g
 LD=$(CC)
 AR=ar ruv
@@ -122,7 +122,7 @@ $Bops$E:	$Bops$O;		$(LD) $(LDFLAGS) -o $@ $Bops$O
 $Bbprint$O:	etc/bprint.c src/profio.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ etc/bprint.c
 $Bops$O:	etc/ops.c src/ops.h;		$(CC) $(CFLAGS) -c -Isrc -o $@ etc/ops.c
 
-$Blcc$E:	$Blcc$O $Bhost$O;	$(LD) $(LDFLAGS) -o $@ $Blcc$O $Bhost$O 
+$Blcc$E:	$Blcc$O $Bhost$O;	$(LD) $(LDFLAGS) -m32 -o $@ $Blcc$O $Bhost$O 
 
 $Blcc$O:	etc/lcc.c;		$(CC) $(CFLAGS) -c -o $@ etc/lcc.c
 $Bhost$O:	$(HOSTFILE);	$(CC) $(CFLAGS) -c -o $@ $(HOSTFILE)
