@@ -1,0 +1,22 @@
+Paths are as follows:
+
+$ ls -ld /usr/local/lib/lcc
+lrwxrwxrwx 1 root root 14 Jun 19 18:07 /usr/local/lib/lcc -> /opt/lcc/build/
+
+$ ls -ld /usr/local/bin/{lcc,bprint}
+lrwxrwxrwx 1 root root 25 Jun 19 18:12 /usr/local/bin/bprint -> /usr/local/lib/lcc/bprint*
+lrwxrwxrwx 1 root root 22 Jun 19 18:12 /usr/local/bin/lcc -> /usr/local/lib/lcc/lcc*
+
+$ ls -ld /opt/lcc/build/gcc
+lrwxrwxrwx 1 root root 48 Jun 19 18:25 /opt/lcc/build/gcc -> /opt/build/lib/gcc/x86_64-pc-linux-gnu/6.1.0/32/
+
+$ ls -al /opt/lcc/build/include/
+total 28
+drwxr-xr-x 2 root root 4096 Jun 19 18:04 ./
+drwxr-xr-x 3 root root 4096 Jun 19 18:34 ../
+-rwxr-xr-x 1 root root  275 Jun 19 18:01 assert.h*
+-rwxr-xr-x 1 root root  968 Jun 19 18:01 float.h*
+-rwxr-xr-x 1 root root  565 Jun 19 18:01 limits.h*
+-rwxr-xr-x 1 root root  759 Jun 19 18:01 math.h*
+-rwxr-xr-x 1 root root  997 Jun 19 18:01 stdarg.h*
+
